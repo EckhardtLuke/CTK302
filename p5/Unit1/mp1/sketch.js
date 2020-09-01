@@ -4,8 +4,16 @@ function setup() {
 
 function draw() {
 
-}
+ellipse(100,100,100,100)
+
+//if (mouseIsPressed) {
+//  background('red');
+//} else {
+//  background(1)
+//}
 
 function mouseReleased() {
   print(mouseX + "," + mouseY)
+}
+
 }
