@@ -11,6 +11,7 @@ ellipse(100,100,100,100)
 //} else {
 //  background(1)
 //}
+text("hello", width/2, height/2)
 
 function mouseReleased() {
   print(mouseX + "," + mouseY)
