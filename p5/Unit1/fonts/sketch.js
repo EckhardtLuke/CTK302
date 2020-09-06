@@ -21,6 +21,6 @@ function draw() {
 
   textFont(f1);
   textSize(60);
-  text("whats up", width/2, weight/2 + 100);
+  text("whats up", width/2, height/2 + 100);
 
 }
