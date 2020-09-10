@@ -154,11 +154,8 @@ if (mouseIsPressed) {     //This stuff happens when pressed
   //fill('white');
   //text(mouseX + ', ' + mouseY, 20, 20);
 }
-
   //Finished the hill and path at about the 25 minute mark
   //Guy finished at around the 90 minute mark
   //Sword done. Sword and arm moving when pressed also done. 2 hour 30 minute mark
   //Finished up the other hills and the story at around the 3 hours and 30 minute point
-
-
 }
