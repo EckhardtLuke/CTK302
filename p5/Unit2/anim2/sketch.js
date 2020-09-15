@@ -14,7 +14,7 @@ function draw() {
   x = x + 5;
 
   if(x > width) {
-    x = -300;
+    x = -800;
   }
 
   pop();
