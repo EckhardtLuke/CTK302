@@ -13,6 +13,7 @@ function draw() {
     background('red');
     text("case 0", 250, 250);
     timer++;
+    
     if(timer > 10*60) {
       state = 1;
       timer = 0;

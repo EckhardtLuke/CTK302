@@ -9,7 +9,7 @@ function draw() {
 //  rect(x, 250, 50, 50);
 
 //  textsize();
-text("a nice sentence", x, 250);
+text("Assignment done", x, 250);
 
   x+=5 ;
 
