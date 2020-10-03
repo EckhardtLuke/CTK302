@@ -14,6 +14,6 @@ text("Assignment done", x, 250);
   x+=5 ;
 
   if(x > width) {
-    x = 0 ;
+    x = -20 ;
   }
 }
