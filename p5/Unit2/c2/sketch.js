@@ -6,6 +6,7 @@ let timer = 0;
 
 function setup() {
   createCanvas(400, 400);
+
   mic = new p5.AudioIn();
   mic.start();
 }
@@ -13,22 +14,20 @@ function setup() {
 function draw() {
   vol = (mic.getLevel()).toFixed(2);
 
-  text("Click the screen first to give\npermission for mic input.\nMy volume is " + vol, 10, 60);
-
   background(c);
 
   switch (state) {
 
     case 0:
-      text("Shhhh", 100, 100);
-      if (vol > .05) {
+      text("Shhhh", 200, 200);
+      if (vol > .02) {
         state = 1;
       }
       break;
 
     case 1:
       background('red');
-      text("Quiet Down", 100, 100);
+      text("Quiet Down", 200, 200);
       timer = timer + 1;
 
       if (timer > 1 * 60) {
@@ -38,4 +37,12 @@ function draw() {
       break;
 
   }
+
+  textSize(18);
+  text("Click the screen first to give\npermission for mic input.\nMy volume is " + vol, 10, 60);
+
+}
+
+function touchStarted() {
+    getAudioContext().resume();
 }
