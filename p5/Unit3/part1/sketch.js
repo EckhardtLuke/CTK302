@@ -1,7 +1,9 @@
 let cars = [];
+var img1;
 
 function setup() {
   createCanvas(500, 500);
+  img1 = loadImage("assets/nick.jpg");
 
   noStroke();
 
@@ -12,7 +14,7 @@ function setup() {
 
 function draw() {
   background('grey');
-
+  image(img1, 0, 0, 500, 500);
   cars.push(new Car());
 
   for (let i = 0; i < cars.length; i++) {
@@ -28,7 +30,7 @@ class Car {
 
   constructor() {
     //attributes
-    this.pos = createVector(width/2, height-80);
+    this.pos = createVector(300, 300);
     this.vel = createVector(random(-.8, .8), random(-10, -5));
     this.r = 255; //random(255);
     this.g = 255; //random(255);
@@ -40,7 +42,7 @@ class Car {
   //methods
   display() {
     fill(this.r, this.g, this.b, this.a);
-    ellipse(this.pos.x, this.pos.y, 20);
+    text("Nicolas Cage", this.pos.x, this.pos.y, 20);
 
   }
 
