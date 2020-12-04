@@ -44,8 +44,8 @@ function setup() {
 }
 
 function draw() {
-  image(bg, 0, 0, windowWidth, windowHeight);
-  //background('#c6f5ff'); // light blue
+  //image(bg, 0, 0, windowWidth, windowHeight);
+  background('black'); // light blue
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
