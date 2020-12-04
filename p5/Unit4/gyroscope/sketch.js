@@ -44,7 +44,7 @@ function setup() {
 }
 
 function draw() {
-  image(bg);
+  image(bg, windowWidth, windowHeight);
   //background('#c6f5ff'); // light blue
 
   // the map command !!!!
