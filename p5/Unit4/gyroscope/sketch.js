@@ -44,7 +44,7 @@ function setup() {
 }
 
 function draw() {
-  image(bg, 0, 0, width, height);
+  image(bg, width, height);
   //background('#c6f5ff'); // light blue
 
   // the map command !!!!
@@ -83,7 +83,7 @@ function draw() {
   fill('white');
   textSize(40);
   textAlign(CENTER);
-  text("your words or image here!", width / 2, 600, windowWidth - 200, windowHeight - 200);
+  //text("your words or image here!", width / 2, 600, windowWidth - 200, windowHeight - 200);
 
 
   // Debugging information -- take this out when you're ready for production!
