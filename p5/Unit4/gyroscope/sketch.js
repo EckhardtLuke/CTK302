@@ -10,10 +10,17 @@ var yPosition = 0;
 var cars = [];
 var frogPos;
 
+let bg;
+let bunnyImage;
+let mainImage;
 
 function setup() {
 
   createCanvas(windowWidth, windowHeight);
+
+  bunnyImage = loadImage("assets/knifeg.png");
+  mainImage = loadImage("assets/pumpkinBg.jpg");
+  bg = loadImage("assets/pumpkinWg.jpg");
 
   // initialize accelerometer variables
   alpha = 0;
@@ -37,8 +44,8 @@ function setup() {
 }
 
 function draw() {
-
-  background('#c6f5ff'); // light blue
+  image(bg, 0, 0, width, height);
+  //background('#c6f5ff'); // light blue
 
   // the map command !!!!
   // takes your variable and maps it from range 1 to range 2
@@ -53,9 +60,9 @@ function draw() {
   //  rotate(radians(alpha)); // using alpha in here so it doesn't feel bad
 
   // draw the FROG
-  // image(bunnyImage, 0, 0, 500, 500);
-  fill('green');
-  ellipse(0, 0, 80, 80);
+  image(bunnyImage, 0, 0, 500, 500);
+  //fill('green');
+  //ellipse(0, 0, 80, 80);
   pop();
 
 
@@ -81,20 +88,20 @@ function draw() {
 
   // Debugging information -- take this out when you're ready for production!
   // Just a bunch of text commands to display data coming in from addEventListeners
-  textAlign(LEFT);
-  textSize(20);
-  fill('black');
-  text("orientation data:", 25, 25);
-  textSize(15);
-  text("alpha: " + alpha, 25, 50);
-  text("beta: " + beta, 25, 70);
-  text("gamma: " + gamma, 25, 90);
-  textSize(20);
-  text("acceleration data:", 25, 125);
-  textSize(15);
-  text("x = " + x, 25, 150); // .toFixed means just show (x) decimal places
-  text("y = " + y, 25, 170);
-  text("z = " + z, 25, 190);
+  // textAlign(LEFT);
+  // textSize(20);
+  // fill('black');
+  // text("orientation data:", 25, 25);
+  // textSize(15);
+  // text("alpha: " + alpha, 25, 50);
+  // text("beta: " + beta, 25, 70);
+  // text("gamma: " + gamma, 25, 90);
+  // textSize(20);
+  // text("acceleration data:", 25, 125);
+  // textSize(15);
+  // text("x = " + x, 25, 150); // .toFixed means just show (x) decimal places
+  // text("y = " + y, 25, 170);
+  // text("z = " + z, 25, 190);
 
 
 }
@@ -145,10 +152,11 @@ function Car() {
   this.display = function() {
 
     // maybe use an image here instead!
-    fill(this.r, this.g, this.b, this.a);
-    ellipse(this.pos.x - 50, this.pos.y, 50, 50);
-    ellipse(this.pos.x + 50, this.pos.y, 50, 50);
-    rect(this.pos.x + 17, this.pos.y - 30, 80, 60) ;
+    // fill(this.r, this.g, this.b, this.a);
+    // ellipse(this.pos.x - 50, this.pos.y, 50, 50);
+    // ellipse(this.pos.x + 50, this.pos.y, 50, 50);
+    // rect(this.pos.x + 17, this.pos.y - 30, 80, 60) ;
+    image(mainImage, 50, 50);
 
   }
 
