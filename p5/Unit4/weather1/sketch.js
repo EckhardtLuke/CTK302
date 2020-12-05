@@ -8,10 +8,17 @@ var windspeed = 0 ;
 var temperature = 0;
 var humidity = 0;
 var name;
+let f1;
+let bg;
+let cloud;
 
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(600, 600);
+
+  f1 = loadFont("assets/skyrim.ttf");
+  bg = loadImage("assets/skyrim.jpg");
+  cloud = loadImage("assets/dragon.png");
 
   // HERE is the call to get the weather.
 
@@ -51,22 +58,26 @@ function draw() {
 
     case 1:
       background(200);
+      image(bg, 0, 0, width, height);
       fill('black');
+      textFont(f1);
+      textSize(20)
       text("What is the weather in " + weather.name + "?", 20, 20);
       text("windspeed is " + windspeed, 20, 40);
       text("humidity is " + humidity + "%", 20, 60);
-      text("temperature is " + temperature, 20, 80);
+      text("temperature is " + temperature + " Fahrenheit", 20, 80);
 
 
       // cloud
-      fill('white');
-      noStroke();
-      ellipse(x, 300, 200, 100);
-      ellipse(x+50, 350, 300, 70);
+      // fill('white');
+      // noStroke();
+      // ellipse(x, 300, 200, 100);
+      // ellipse(x+50, 350, 300, 70);
+      image(cloud, x, 300, 200, 100);
 
       // move the cloud's x position
       x = x + windspeed/4;
-      if (x > width) x = 0;
+      if (x > width + 50) x = -100;
 
       break;
 

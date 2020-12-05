@@ -13,7 +13,7 @@ function setup() {
 
   createCanvas(windowWidth, windowHeight);
 
-  bunnyImage = loadImage("assets/cage.jpg");
+  bunnyImage = loadImage("assets/cage.png");
   imageMode(CENTER);
   rectMode(CENTER);
 
